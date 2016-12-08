@@ -1,3 +1,4 @@
 - Interchange for images
 - Alt text for links and images
+- Prevent widows and orphans in text
 

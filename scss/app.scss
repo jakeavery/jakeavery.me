@@ -140,3 +140,10 @@ h1 {
     right: 0%;
     width: 100%;
 }
+
+#small-intro {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-left: 3px solid $primary-color;
+    border-right: 3px solid $primary-color;
+}
