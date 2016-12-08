@@ -45,11 +45,14 @@
 // 1. Global
 // ---------
 
+// Font Import
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i');
+
 $global-font-size: 100%;
 $global-width: rem-calc(2200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2199e8,
+  primary: #db0000,
   secondary: #777,
   success: #3adb76,
   warning: #ffae00,
@@ -62,7 +65,7 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Noto Sans', Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
