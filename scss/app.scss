@@ -51,14 +51,15 @@
 
 // Custom Styles
 
-// Fonts
+/********************************* FONTS ************************************************/
 h1 {
     font-weight: 400;
     font-style: italic;
     color: $primary-color;
     line-height: 1.3;
+    font-size: 8vw;
 }
-
+/********************************* HEADER **********************************************/
 #hero:before {
     content:"";
     display: block;
@@ -78,6 +79,7 @@ h1 {
     position: relative;
 
 }
+
 #hey {
     color: white;
     position: absolute;
@@ -110,6 +112,7 @@ h1 {
         margin-right: 0;
     }
 }
+
 #header-cta-button {
     position: absolute;
     margin-right: 0;
