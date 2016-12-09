@@ -159,15 +159,19 @@ body {
         background: #fff;
         border-radius: 2px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        
-        @media #{$medium-up} {
-        
+        @media #{$small-only} {
+            @include grid-column(10); 
         }
     }
-    /*
-    .row {
-        margin-left: 4rem;
-        margin-right: 4rem;
+    
+    @media #{$medium-up} {
+        .row {
+            @include grid-row(15) {
+                .columns {
+                    @include grid-column(6);
+                }
+            }
+        }
     }
-    */
+    
 }
