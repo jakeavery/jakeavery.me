@@ -51,6 +51,9 @@
 
 // Custom Styles
 
+/******************************* VARIABLES **********************************************/
+$primary-border: 3px solid $primary-color;
+
 /********************************* FONTS ************************************************/
 h1 {
     font-weight: 400;
@@ -73,7 +76,7 @@ body {
     background: #e2e1e0;
 }
 
-/********************************* HEADER **********************************************/
+/******************************** HEADER ***********************************************/
 #hero:before {
     content:"";
     display: block;
@@ -134,8 +137,8 @@ body {
 #small-intro {
     color: white;
     background: rgba(0, 0, 0, 0.5);
-    border-left: 3px solid $primary-color;
-    border-right: 3px solid $primary-color;
+    border-left: $primary-border;
+    border-right: $primary-border;
 }
 #skills-tech {
     .columns {
@@ -161,6 +164,11 @@ body {
                 }
             }
         }
+    }
+    h2 {
+        border-bottom: $primary-border;
+        padding-top: .2rem;
+        padding-bottom: .2rem;
     }
     
 }

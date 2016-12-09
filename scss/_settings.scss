@@ -120,7 +120,7 @@ $header-sizes: (
   ),
   medium: (
     'h1': 48,
-    'h2': 40,
+    'h2': 32,
     'h3': 31,
     'h4': 25,
     'h5': 20,
@@ -128,12 +128,12 @@ $header-sizes: (
   ),
 );
 $header-color: inherit;
-$header-lineheight: 1.4;
+$header-lineheight: 1.3;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.6;
+$paragraph-lineheight: 1.4;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
