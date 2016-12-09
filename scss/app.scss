@@ -147,6 +147,8 @@ body {
     border-right: $primary-border;
     max-width: 490px;
 }
+
+/******************************** SKILLS & TECH *****************************************/
 #skills-tech {
     @include foundation-flex-grid;
     @include foundation-flex-classes;
@@ -176,4 +178,9 @@ body {
             font-size: 1.5rem;
         }
     }
+}
+
+/******************************** WORK & LEADERSHIP *************************************/
+#work-leadership, #education {
+
 }
