@@ -127,18 +127,25 @@ body {
         }
     }
 }
-#header-cta-button {
+#large-cta-button {
     position: absolute;
     margin-right: 0;
     bottom: 20%;
     right: 0%;
     width: 100%;
 }
+#small-cta-button {
+    a {
+        max-width: 200px;
+    }
+}
+
 #small-intro {
     color: white;
     background: rgba(0, 0, 0, 0.5);
     border-left: $primary-border;
     border-right: $primary-border;
+    max-width: 490px;
 }
 #skills-tech {
     @include foundation-flex-grid;
@@ -159,6 +166,14 @@ body {
         border-bottom: $primary-border;
         padding-top: .2rem;
         padding-bottom: .2rem;
+        @media #{$medium-up} {
+            font-size: 1.3rem;
+        }
+        @include breakpoint(800px) {
+            font-size: 1.4rem;
+        }
+        @media #{$large-up} {
+            font-size: 1.5rem;
+        }
     }
-    
 }
