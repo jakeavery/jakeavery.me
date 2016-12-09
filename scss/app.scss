@@ -61,19 +61,14 @@ h1 {
     
     @media #{$large-only} {
         font-size: 5vw;
-
-    }
-    
+    } 
     @media #{$xlarge-only} {
         font-size: 5vw;
-    }
-    
+    }  
     @include breakpoint(2200px) {
         font-size: 7rem;
-    }
-    
+    }    
 }
-
 body {
     background: #e2e1e0;
 }
@@ -85,7 +80,6 @@ body {
     width: 100%;
     padding-bottom: 56.25%;
 }
-
 #hero {
     background: url("/img/hero-small.jpg") no-repeat center center;
     background-repeat: no-repeat;
@@ -98,46 +92,38 @@ body {
     position: relative;
 
 }
-
 #hey {
     color: white;
     position: absolute;
-    
+ 
     @media #{$small-only} {
         top: 20%;
         right: 0%;
     }
-
     @media #{$medium-only} {
         top: 20%;
         right: 0%;
-    }
-    
+    }   
     @media #{$large-only} {
         top: 15%;
         right: 0%;
-    }
-    
+    }   
     @media #{$xlarge-up} {
         top: 20%;
         right: 0%;
-    }
-    
+    }    
     .columns {
         background-color: rgba(0, 0, 0, 0.5);
-    }
-    
+    }  
     .row {
         margin-right: 0;
-    }
-    
+    } 
     p {
         @include breakpoint(1600px) {
             font-size: 1.4rem;
         }
     }
 }
-
 #header-cta-button {
     position: absolute;
     margin-right: 0;
@@ -145,14 +131,12 @@ body {
     right: 0%;
     width: 100%;
 }
-
 #small-intro {
     color: white;
     background: rgba(0, 0, 0, 0.5);
     border-left: 3px solid $primary-color;
     border-right: 3px solid $primary-color;
 }
-
 #skills-tech {
     .columns {
         margin-bottom: 1.2rem;
@@ -162,13 +146,18 @@ body {
         @media #{$small-only} {
             @include grid-column(10); 
         }
-    }
-    
+    } 
     @media #{$medium-up} {
         .row {
             @include grid-row(15) {
                 .columns {
                     @include grid-column(6);
+                }
+                .columns:first-of-type {
+                    @include grid-col-pos(1);
+                }
+                .columns:last-of-type {
+                    @include grid-col-pos(-1);
                 }
             }
         }
