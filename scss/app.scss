@@ -141,28 +141,18 @@ body {
     border-right: $primary-border;
 }
 #skills-tech {
+    @include foundation-flex-grid;
+    @include foundation-flex-classes;
     .columns {
         margin-bottom: 1.2rem;
         background: #fff;
         border-radius: 2px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         @media #{$small-only} {
-            @include grid-column(10); 
+            max-width: 410px;
         }
-    } 
-    @media #{$medium-up} {
-        .row {
-            @include grid-row(15) {
-                .columns {
-                    @include grid-column(6);
-                }
-                .columns:first-of-type {
-                    @include grid-col-pos(1);
-                }
-                .columns:last-of-type {
-                    @include grid-col-pos(-1);
-                }
-            }
+        @media #{$medium-up} {
+            max-width: 440px;
         }
     }
     h2 {
