@@ -190,11 +190,14 @@ body {
 /******************************** WORK & LEADERSHIP *************************************/
 #work-leadership, #education {
     .card {
-        padding-top: .2rem;
+        padding-top: .5rem;
         .row:last-of-type {
             font-size: .8rem;
             color: gray;
             border-top: 1px solid lightgray;
+        }
+        @media #{$medium-only} {
+            max-width: 85vw;
         }
     }
     .job-title {
