@@ -54,6 +54,17 @@
 /******************************* VARIABLES **********************************************/
 $primary-border: 3px solid $primary-color;
 
+/******************************** GLOBALS ***********************************************/
+.card {
+    margin-bottom: 1.2rem;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    @media #{$small-only} {
+        max-width: 410px;
+    }
+}
+
 /********************************* FONTS ************************************************/
 h1 {
     font-weight: 400;
@@ -153,10 +164,6 @@ body {
     @include foundation-flex-grid;
     @include foundation-flex-classes;
     .columns {
-        margin-bottom: 1.2rem;
-        background: #fff;
-        border-radius: 2px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         @media #{$small-only} {
             max-width: 410px;
         }
@@ -182,5 +189,22 @@ body {
 
 /******************************** WORK & LEADERSHIP *************************************/
 #work-leadership, #education {
-
+    .card {
+        padding-top: .2rem;
+        .row:last-of-type {
+            font-size: .8rem;
+            color: gray;
+            border-top: 1px solid lightgray;
+        }
+    }
+    .job-title {
+        border-left: $primary-border;
+        padding-left: .5rem;
+    }
+    h3 {
+        margin-bottom: 0; 
+    }
+    ul {
+        margin-bottom: 8px;
+    }
 }
