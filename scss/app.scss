@@ -109,7 +109,6 @@ body {
 #hey {
     color: white;
     position: absolute;
- 
     @media #{$small-only} {
         top: 20%;
         right: 0%;
@@ -197,9 +196,6 @@ body {
             border-top: 1px solid lightgray;
         }
         @media #{$medium-only} {
-            max-width: 86.66vw;
-        }
-        @media #{$large-only} {
             max-width: 86.66vw;
         }
     }
