@@ -221,3 +221,8 @@ body {
         border-bottom: 1px solid lightgray;
     }
 }
+#left-card {
+    @media #{$xlarge-up} {
+        margin-top: 49.6px;
+    }
+}
