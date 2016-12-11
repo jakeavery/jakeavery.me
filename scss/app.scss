@@ -200,7 +200,7 @@ body {
             max-width: 85vw;
         }
     }
-    .job-title {
+    .card-title {
         border-left: $primary-border;
         padding-left: .5rem;
     }
@@ -216,4 +216,9 @@ body {
 }
 #education h3 {
     margin-bottom: 8px;
+}
+.certifications {
+    li:nth-child(even):not(:last-child) {
+        border-bottom: 1px solid lightgray;
+    }
 }
