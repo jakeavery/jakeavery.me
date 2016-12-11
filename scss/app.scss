@@ -166,10 +166,7 @@ body {
 
 /******************************** SKILLS & TECH *****************************************/
 #skills-tech {
-    .columns {
-        @media #{$small-only} {
-            max-width: 410px;
-        }
+    .card {
         @media #{$medium-up} {
             max-width: 440px;
         }
@@ -200,7 +197,10 @@ body {
             border-top: 1px solid lightgray;
         }
         @media #{$medium-only} {
-            max-width: 85vw;
+            max-width: 86.66vw;
+        }
+        @media #{$large-only} {
+            max-width: 86.66vw;
         }
     }
     .card-title {
