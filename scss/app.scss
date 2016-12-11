@@ -159,10 +159,13 @@ body {
     max-width: 490px;
 }
 
-/******************************** SKILLS & TECH *****************************************/
-#skills-tech {
+.uses-flex {
     @include foundation-flex-grid;
     @include foundation-flex-classes;
+}
+
+/******************************** SKILLS & TECH *****************************************/
+#skills-tech {
     .columns {
         @media #{$small-only} {
             max-width: 410px;
