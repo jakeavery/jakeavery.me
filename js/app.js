@@ -1,6 +1,6 @@
 $(document).foundation();
 
-// Equalized Resume section width at large screens
+// Run these functions on page load and resize
 $(document).ready(function() {
     // Run on initial page load
     equalizeResume();
@@ -9,6 +9,7 @@ $(document).ready(function() {
     $(window).resize(equalizeResume);
 });
 
+// Equalized Resume section width at large screens
 function equalizeResume() {
     // Check if Skills and Tech cards are stacked or not. If not, equalize!
     if ($('#right-card').offset().left - $('#left-card').offset().left - $('#left-card').outerWidth() > 0) {

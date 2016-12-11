@@ -226,3 +226,16 @@ body {
         margin-top: 49.6px;
     }
 }
+
+/*********************************** SHOWCASE *****************************************/
+#showcase {
+    .card {
+        position: relative;
+    }
+    img {
+        display: block;
+        margin: auto;
+        width: 90%;
+        position: absolute;
+    }
+}
