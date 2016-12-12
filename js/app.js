@@ -34,18 +34,23 @@ function showcaseCards() {
     // For each card:
     $("#showcase .card").each(function() {
         
-        // Get height of image below it
-        var imgHeight = $(this).closest(".row").next().height();
-        console.log(imgHeight);
+        // Get height of this card's image
+        var thisImg = $(this).closest(".row").next();
+        var imgHeight = thisImg.height();
         
         // If collapsed, set card size to be bigger than image
         if ($(this).data("toggle") == "collapsed") {
-           var cardHeight = imgHeight*1.1+"px"; 
-           $(this).css("height", cardHeight);
+            
+            // Set card height
+            var cardHeight = imgHeight*1.1; 
+            $(this).css("height", cardHeight);
+            
+            // Position image
+            var cardOffset = $(this).offset().top;
+            var imgOffset = cardOffset+((cardHeight-imgHeight)/2)+"px";
+            thisImg.css("top", imgOffset);            
         }
-        // Get card top offset
-    
-        // Position image in relation to card
+
     });
 }
 
