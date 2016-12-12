@@ -4,9 +4,13 @@ $(document).foundation();
 $(document).ready(function() {
     // Run on initial page load
     equalizeResume();
+    showcaseCards();
     
     // Run on resize of the window
-    $(window).resize(equalizeResume);
+    $(window).resize(function() {
+        equalizeResume(); 
+        showcaseCards();
+    });
 });
 
 // Equalized Resume section width at large screens
@@ -21,4 +25,25 @@ function equalizeResume() {
         $('#work-leadership .card, #education .card').css("max-width", equalizedWidth);
         //$('#education .card').css("max-width", equalizedWidth);
     }
+}
+
+// Set cards to isCollapsed initially
+
+// Controls Showcase Card size and position on page load and resize
+function showcaseCards() {
+    // For each card:
+    
+        // Get height of image below it
+        
+        // If collapsed, set card size to be bigger than image
+    
+        // Get card top offset
+    
+        // Position image in relation to card
+    
+}
+
+// Expand/collapse cards
+function showcaseCardToggle() {
+    
 }
