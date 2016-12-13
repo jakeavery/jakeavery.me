@@ -55,6 +55,19 @@ function showcaseCards() {
 }
 
 // Expand/collapse cards
-function showcaseCardToggle() {
+$("#showcase img").click(function() {
     
-}
+    // Determine if card is collapsed or expanded
+    var thisCard = $(this).prev().find(".card");
+    if (thisCard.data("toggle") == "collapsed") {
+        // Expand card
+        console.log("Expanding card...");
+        thisCard.data("toggle", "expanded")
+        
+    } else {
+        // Collapse Card
+        console.log("Collapsing card...")
+        thisCard.data("toggle", "collapsed")
+    }
+    
+})
