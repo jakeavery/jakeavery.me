@@ -61,12 +61,37 @@ $("#showcase img").click(function() {
     var thisCard = $(this).prev().find(".card");
     if (thisCard.data("toggle") == "collapsed") {
         // Expand card
-        console.log("Expanding card...");
+        
+        // Expand width
+        thisCard.removeClass("small-10").addClass("small-12");
+        
+        // Show text
+        thisCard.children().removeClass("is-hidden");
+        
+        // Expand height
+        var headingHeight = thisCard.children("h3").height();
+        var paragraphHeight = thisCard.children("p").height();
+        var cardHeight = thisCard.height() + headingHeight + paragraphHeight;
+        thisCard.css("height", cardHeight);
+
+        
+        // Set data attribute
         thisCard.data("toggle", "expanded")
         
     } else {
         // Collapse Card
-        console.log("Collapsing card...")
+        
+        // Shrink width
+        thisCard.removeClass("small-12").addClass("small-10");
+        
+        // Hide text
+        thisCard.children().addClass("is-hidden");
+        
+        // Shrink height
+        var cardHeight = $(this).height()*1.1;
+        thisCard.css("height", cardHeight);
+        
+        // Set data attribute
         thisCard.data("toggle", "collapsed")
     }
     

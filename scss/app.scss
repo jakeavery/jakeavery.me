@@ -236,6 +236,11 @@ body {
 #showcase {
     .card {
         position: relative;
+        transition: all 0.2s ease;
+        p {
+            position: absolute;
+            bottom: 0;
+        }
     }
     img {
         display: block;
