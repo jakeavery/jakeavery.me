@@ -2,4 +2,6 @@
 - Alt text for links and images
 - Prevent widows and orphans in text
 - If browser doesn't support stuff, have page directing to download/view on modern browser
+- Make sure showcase cards load correctly
+- Showcase intro: show click/tap based on is touch enabled
 

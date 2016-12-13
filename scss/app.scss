@@ -244,5 +244,12 @@ body {
         position: absolute;
         left: 5%;
         box-shadow: $material-shadow-3;
+        cursor: pointer;
     }
+}
+#showcase-intro {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-left: $primary-border;
+    border-right: $primary-border;
 }
