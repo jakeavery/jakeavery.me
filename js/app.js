@@ -73,10 +73,19 @@ $("#showcase img").click(function() {
         var paragraphHeight = thisCard.children("p").height();
         var cardHeight = thisCard.height() + headingHeight + paragraphHeight;
         thisCard.css("height", cardHeight);
-
+        
+        // Move image
+        var imgOffset = $(this).offset().top+headingHeight+"px";
+        $(this).css("top", imgOffset);
+        
+        // Move other images
+        
+        // Remove drop shadow
+        $(this).css("box-shadow", "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)");
         
         // Set data attribute
-        thisCard.data("toggle", "expanded")
+        thisCard.data("toggle", "expanded");
+        
         
     } else {
         // Collapse Card
@@ -91,8 +100,16 @@ $("#showcase img").click(function() {
         var cardHeight = $(this).height()*1.1;
         thisCard.css("height", cardHeight);
         
+        // Move image back
+        var cardOffset = thisCard.offset().top;
+        var imgOffset = cardOffset+((cardHeight-$(this).height())/2)+"px";
+        $(this).css("top", imgOffset);
+        
+        // Add drop shadow
+        $(this).css("box-shadow", "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)");
+        
         // Set data attribute
-        thisCard.data("toggle", "collapsed")
+        thisCard.data("toggle", "collapsed");
     }
     
 })
