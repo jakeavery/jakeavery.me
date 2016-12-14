@@ -3,7 +3,7 @@ $(document).foundation();
 // Run these functions on page load and resize
 $(document).ready(function() {
     // Run on initial page load
-    equalizeResume();    
+    equalizeResume(); 
     
     // Run on resize of the window
     $(window).resize(function() {
@@ -24,3 +24,16 @@ function equalizeResume() {
         //$("#education .card").css("max-width", equalizedWidth);
     }
 }
+
+$(".toggle-click-target").click(function() {
+    if ($(this).prev().css("display") == "none") {
+        // Expand card
+        $(this).prev().show(200);
+        $(this).children("svg").addClass("expanded");
+        
+    } else {
+        // Collapse card
+        $(this).prev().hide(200);
+        $(this).children("svg").removeClass("expanded");
+    }
+});
