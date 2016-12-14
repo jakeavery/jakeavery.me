@@ -235,21 +235,15 @@ body {
 /*********************************** SHOWCASE *****************************************/
 #showcase {
     .card {
-        position: relative;
         transition: all 0.2s ease;
-        p {
-            position: absolute;
-            bottom: 0;
+        padding: 0;
+        h3, p {
+            padding-left: 10px;
+            padding-right: 10px;
         }
-    }
-    img {
-        display: block;
-        margin: auto;
-        width: 90%;
-        position: absolute;
-        left: 5%;
-        box-shadow: $material-shadow-3;
-        cursor: pointer;
+        img {
+            width: 100%;
+        }
     }
 }
 #showcase-intro {
