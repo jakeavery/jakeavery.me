@@ -241,14 +241,14 @@ body {
             padding-left: 10px;
             padding-right: 10px;
         }
-        img {
-            width: 100%;
-        }
+    }
+    svg {
+        fill: gray;
     }
 }
-#showcase-intro {
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    border-left: $primary-border;
-    border-right: $primary-border;
+.showcase-image {
+    width: 100%;
+}
+.toggle-click-target {
+    
 }
