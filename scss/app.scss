@@ -243,9 +243,6 @@ body {
         p {
             display: none;
         }
-        @media #{$medium-up} {
-            max-width: 440px;
-        }
     }
     svg {
         fill: gray;

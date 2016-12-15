@@ -13,15 +13,20 @@ $(document).ready(function() {
 
 // Equalized Resume section width at large screens
 function equalizeResume() {
-    // Check if Skills and Tech cards are stacked or not. If not, equalize!
+    // Check if Skills and Tech cards are stacked or not. If not, equalize! (Medium and large)
     if ($("#right-card").offset().left - $("#left-card").offset().left - $("#left-card").outerWidth() > 0) {
         // Space between left and right cards
         var spaceBetween = $("#right-card").offset().left - $("#left-card").offset().left - $("#left-card").outerWidth();
         // Total width of cards + space between
         var equalizedWidth = $("#left-card").outerWidth() + $("#right-card").outerWidth() + spaceBetween+"px";
         // Set Resume cards to equalized width
-        $("#work-leadership .card, #education .card, #showcase .card").css("max-width", equalizedWidth);
-        //$("#education .card").css("max-width", equalizedWidth);
+        $("#work-leadership .card, #education .card").css("max-width", equalizedWidth);
+        // Set Showcase cards to proper width
+        if ($("#large-cta-button .show-for-large").is(":visible") == false ) {
+            $("#showcase .card").css("max-width", equalizedWidth);  
+        } else {
+            $("#showcase .card").css("max-width", "440px"); 
+        }
     }
 }
 
