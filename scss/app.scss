@@ -235,7 +235,6 @@ body {
 /*********************************** SHOWCASE *****************************************/
 #showcase {
     .card {
-        //transition: all 0.2s ease;
         padding: 0;
         h3, p {
             padding-left: 10px;
@@ -243,6 +242,9 @@ body {
         }
         p {
             display: none;
+        }
+        @media #{$large-up} {
+            max-width: 440px;
         }
     }
     svg {
@@ -255,6 +257,11 @@ body {
 }
 .showcase-image {
     width: 100%;
+    /*
+    @media #{$xlarge-up} {
+        
+        max-height: 90vh;
+    }*/
 }
 .toggle-click-target {
     cursor: pointer;
