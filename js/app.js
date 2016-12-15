@@ -3,16 +3,16 @@ $(document).foundation();
 // Run these functions on page load and resize
 $(document).ready(function() {
     // Run on initial page load
-    equalizeResume(); 
+    equalizeCards(); 
     
     // Run on resize of the window
     $(window).resize(function() {
-        equalizeResume(); 
+        equalizeCards(); 
     });
 });
 
 // Equalized Resume section width at large screens
-function equalizeResume() {
+function equalizeCards() {
     // Check if Skills and Tech cards are stacked or not. If not, equalize! (Medium and large)
     if ($("#right-card").offset().left - $("#left-card").offset().left - $("#left-card").outerWidth() > 0) {
         // Space between left and right cards
@@ -27,7 +27,10 @@ function equalizeResume() {
         } else {
             $("#showcase .card").css("max-width", "440px"); 
         }
+    } else if ($("#large-cta-button .show-for-large").is(":visible") == true ) {
+        // xlarge and up
     }
+    
 }
 
 $(".toggle-click-target").click(function() {
