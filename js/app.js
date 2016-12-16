@@ -38,7 +38,10 @@ function equalizeCards() {
         $("#skills-tech .card").offset({left: cardOffset});
         
         // Equalize and position Showcase cards correctly
-        
+        var rowWidth = $("#showcase .card").parent(".row").width();
+        var leftRowMargin = $("#work-leadership .card").offset().left - $("#hero").offset().left;
+        var showcaseCardWidth = (rowWidth - 3*leftRowMargin)/2;
+        $("#showcase .card").css("max-width", showcaseCardWidth);   
     }
     
 }
