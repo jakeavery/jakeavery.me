@@ -38,6 +38,7 @@ function equalizeCards() {
         $("#skills-tech .card").offset({left: cardOffset});
         
         // Equalize and position Showcase cards correctly
+        
     }
     
 }
