@@ -1,18 +1,20 @@
 $(document).foundation();
-
 // Run these functions on page load and resize
 $(document).ready(function() {
     // Run on initial page load
     equalizeCards(); 
+    stickyCards();
     
     // Run on resize of the window
     $(window).resize(function() {
-        equalizeCards(); 
+        equalizeCards();
+        stickyCards();
     });
 });
 
 // Equalized Resume section width at large screens
 function equalizeCards() {
+    
     // Check if Skills and Tech cards are stacked or not. If not, equalize! (Medium and large)
     if ($("#right-card").offset().left - $("#left-card").offset().left - $("#left-card").outerWidth() > 0) {
         // Space between left and right cards
@@ -27,9 +29,7 @@ function equalizeCards() {
         } else {
             $("#showcase .card").css("max-width", "440px"); 
         }
-    } else if ($("#large-cta-button .show-for-large").is(":visible") == true ) {
-        // xlarge and up
-        
+    } else if ($("#large-cta-button .show-for-large").is(":visible") == true) {
         // Position Skills & Leadership cards correctly
         var leftMargin = $("#work-leadership .card").offset().left;
         var viewWidth = $(window).width();
@@ -42,10 +42,23 @@ function equalizeCards() {
         var leftRowMargin = $("#work-leadership .card").offset().left - $("#hero").offset().left;
         var showcaseCardWidth = (rowWidth - 3*leftRowMargin)/2;
         $("#showcase .card").css("max-width", showcaseCardWidth);   
-    }
-    
+    } 
 }
 
+// Stickied cards
+function stickyCards() {
+    if (($("#right-card").offset().left - $("#left-card").offset().left - $("#left-card").outerWidth() <= 0) && ($("#large-cta-button .show-for-large").is(":visible") == true)) {
+        $("#skills-tech").attr("data-sticky-container", "");
+        $("#skills-tech .align-spaced").addClass("sticky").attr("data-sticky", "").attr("data-margin-top", "0").attr("data-anchor", "sticky-anchor");
+        $("#skills-tech").foundation();
+    } else {
+        $("#skills-tech").removeAttr("data-sticky-container", "");
+        $("#skills-tech .align-spaced").removeClass("sticky").removeClass("is-anchored").removeClass("is-stuck").removeAttr("data-sticky", "").removeAttr("data-margin-top", "0").removeAttr("data-anchor", "sticky-anchor");
+        $("#skills-tech").foundation();
+    }
+}
+
+// Expand Showcase cards
 $(".toggle-click-target").click(function() {
     if ($(this).prev().css("display") == "none") {
         // Expand card
