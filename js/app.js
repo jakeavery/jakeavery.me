@@ -29,6 +29,16 @@ function equalizeCards() {
         }
     } else if ($("#large-cta-button .show-for-large").is(":visible") == true ) {
         // xlarge and up
+        // Position Skills & Leadership cards correctly
+        var leftMargin = $("#work-leadership .card").offset().left;
+        console.log("Left margin: "+leftMargin);
+        var viewWidth = $(window).width();
+        console.log("Viewport width: "+viewWidth);
+        var cardWidth = $("#skills-tech .card").outerWidth();
+        var cardOffset = viewWidth - leftMargin - cardWidth;
+        console.log(cardOffset);
+        $("#skills-tech .card").offset({left: cardOffset});
+        // Equalize and position Showcase cards correctly
     }
     
 }
