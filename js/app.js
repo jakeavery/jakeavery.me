@@ -1,19 +1,19 @@
 $(document).foundation();
 // Run these functions on page load and resize
-$(document).ready(function() {
+$(document).ready(function(){
     // Run on initial page load
     equalizeCards(); 
     stickyCards();
     
     // Run on resize of the window
-    $(window).resize(function() {
+    $(window).resize(function(){
         equalizeCards();
         stickyCards();
     });
 });
 
 // Equalized Resume section width at large screens
-function equalizeCards() {
+function equalizeCards(){
     
     // Check if Skills and Tech cards are stacked or not. If not, equalize! (Medium and large)
     if ($("#right-card").offset().left - $("#left-card").offset().left - $("#left-card").outerWidth() > 0) {
@@ -46,7 +46,7 @@ function equalizeCards() {
 }
 
 // Stickied cards
-function stickyCards() {
+function stickyCards(){
     if (($("#right-card").offset().left - $("#left-card").offset().left - $("#left-card").outerWidth() <= 0) && ($("#large-cta-button .show-for-large").is(":visible") == true)) {
         $("#skills-tech").attr("data-sticky-container", "");
         $("#skills-tech .align-spaced").addClass("sticky").attr("data-sticky", "").attr("data-margin-top", "0").attr("data-anchor", "sticky-anchor");
@@ -59,7 +59,7 @@ function stickyCards() {
 }
 
 // Expand Showcase cards
-$(".toggle-click-target").click(function() {
+$(".toggle-click-target").click(function(){
     if ($(this).prev().css("display") == "none") {
         // Expand card
         $(this).prev().show(200);
@@ -71,3 +71,72 @@ $(".toggle-click-target").click(function() {
         $(this).children("svg").removeClass("expanded");
     }
 });
+
+// Contact form submission 
+
+$(document)
+    .bind("submit", function(e) {
+    e.preventDefault();
+    console.log("submit intercepted");
+})
+    .bind("formvalid.zf.abide", function(e,$form) {
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var message = $("#message").val();
+
+    // store data in this array
+    var dataArray = {name, email, message};
+
+    console.log(dataArray);
+    // ajax submit
+    $.ajax({
+        url: "contact-form.php",
+        type: "post",
+        data: dataArray,
+        success: function(data){
+            console.log("php success");
+        },
+        error: function(jqXHR, status, error){
+            console.log("status: " + status + " message: " + error);   
+        }
+    }); //end ajax call
+    
+});
+
+/*
+$("#contact-form button").click(function(){
+    $("#contact-form")
+        .on("invalid.zf.abide", function(){
+        var invalid_fields = $(this).find("[data-invalid]");
+        console.log(invalid_fields);
+    })
+        .on("submit", function(){
+        
+        console.log("Valid!");
+
+        // grab the values of these id"s
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+
+        // store data in this array
+        var dataArray = {name, email, message};
+
+        console.log(dataArray);
+
+        // begin ajax call
+        $.ajax({
+            url: "contact-form.php",
+            type: "post",
+            data: dataArray,
+            success: function(data){
+                console.log("php success");
+                console.log(data);
+            },
+            error: function(jqXHR, status, error){
+                console.log("status: " + status + " message: " + error);   
+            }
+        }); //end ajax call
+    }); // on valid Abide form submit 
+});
+*/
