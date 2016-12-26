@@ -1,4 +1,5 @@
 - Interchange for images
 - Alt text for links and images
 - If browser doesn't support stuff, have page directing to download/view on modern browser
+- Might need to reload orbit on resize to fix weird things happening with showcase images
 
